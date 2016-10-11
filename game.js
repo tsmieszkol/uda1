@@ -735,12 +735,15 @@ Asteroid.prototype = new Sprite();
 
 Coin = function () {
   this.init("coin",
-            [-5,  0,
-              0,  5,
-              5,  0,
-              0, -5]);
+            [-15,  0,
+              0,  15,
+              15,  0,
+              0, -15]);
 
   this.collidesWith = ["ship"];
+ this.color = 'yellow';
+ this.solid = true;
+
 
   this.newPosition = function () {
     this.x = Math.random() * Game.canvasWidth;
